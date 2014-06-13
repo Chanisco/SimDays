@@ -31,7 +31,7 @@ public class GuiReaction : MonoBehaviour {
 	void OnGUI(){
 		CanIReact 	= GetComponent<GuiSocial>().ConvNumber; 
 		bool ReactionRequest = Conversations.Conversation[CanIReact].Reaction;
-		Debug.Log(ReactionRequest);
+		//Debug.Log(ReactionRequest);
 
 
 		if(ReactionRequest == true){

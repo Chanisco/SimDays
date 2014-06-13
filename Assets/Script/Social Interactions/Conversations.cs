@@ -6,46 +6,58 @@ using System;
 public class Conversations : MonoBehaviour {
 	
 	static public List <ConvContent> Conversation = new List <ConvContent>{
-		new ConvContent(0,"Me", "Hi",							"Happy", "Jump", 	false),
-		new ConvContent(1,"Me", "How are you",					"Happy", "" , 		true),
-		new ConvContent(2,"Me", "HA, Now i got you!",			"Happy", "Jump" , 	true),
-		new ConvContent(3,"Me", "Thought you could get away?",	"Happy", "Chase", 	false),
+		new ConvContent(0,"???", "HA, Now i got you!",				"Happy", 	"Jump", 	false),
+		new ConvContent(1,"???", "Thinking you could outrun me!?",	"Happy", 		"" , 	false),
+		new ConvContent(2,"???", "Not today!",						"Happy", 		"" , 	true),
+		new ConvContent(3,"???", "Thought you could get away?",		"Happy", 		"" , 	true),
+		new ConvContent(4,"???", "Can't believe you went without me","Happy", 		"" , 	false),
+		new ConvContent(5,"???", "Is something wrong?",				"Questioned", 	"" , 	true),
+		new ConvContent(6,"???", "Well fuck...",					"Shocked", 		"" , 	true),
+		new ConvContent(7,"???", "",								"Shocked", 		"" , 	true),
+		new ConvContent(8,"???", "",								"Shocked", 		"" , 	true),
 
 	};
 
 	static public List<ConvReact> Reactions = new List<ConvReact>{
-		new ConvReact(1,"1", "Man up!" , "Cry"),
-		new ConvReact(2,"2", "Man up!" , "Cry"),
-		new ConvReact(3,"3", "Man up!" , "Cry"),
-		new ConvReact(4,"4", "Man up!" , "Cry"),
-
+		new ConvReact(0,"", "" , ""),
+		new ConvReact(1,"", "" , ""),
+		new ConvReact(2,"RUN", "Man Up" , "CRY"),
+		new ConvReact(3,"RUN FASTER", "Run back" , "Stop"),
+		new ConvReact(4,"", "" , ""),
+		new ConvReact(5,"Duck!", "Uhm no" , "...."),
+		new ConvReact(6,"", "" , ""),
 	};
 
 	static public List<ConvInfluence> Influence = new List<ConvInfluence>{
-		new ConvInfluence(0,0,0,0,0,0,0),
-		new ConvInfluence(1,0,0,0,0,0,0),
-		new ConvInfluence(2,0,0,0,0,0,0),
+		new ConvInfluence(0,0,0,0, 0,0,0, 0),
+		new ConvInfluence(1,0,0,0, 0,0,0, 0),
+		new ConvInfluence(2,1,2,0, 3,4,6, 1),
 	};
 
 	public class ConvInfluence{
 		private int iD;
+
 		private int firstInfluence;
 		private int secInfluence;
 		private int thirdInfluence;
 		
-		private int firstInfluenceTarget;
-		private int secInfluenceTarget;
-		private int thirdInfluenceTarget;
+		private int firstListTarget;
+		private int secListTarget;
+		private int thirdListTarget;
 
-		public ConvInfluence(int iD,int firstInfluence,int secInfluence, int thirdInfluence , int firstInfluenceTarget , int secInfluenceTarget ,int thirdInfluenceTarget){
+		private int conversationTarget;
+
+		public ConvInfluence(int iD,int firstInfluence,int secInfluence, int thirdInfluence , int firstInfluenceTarget , int secInfluenceTarget ,int thirdInfluenceTarget, int conversationTarget){
 			this.iD = iD;
 			this.firstInfluence = firstInfluence;
 			this.secInfluence 	= secInfluence;
 			this.thirdInfluence = thirdInfluence;
 
-			this.firstInfluenceTarget 	= firstInfluenceTarget;
-			this.secInfluenceTarget 	= secInfluenceTarget;
-			this.thirdInfluenceTarget 	= thirdInfluenceTarget;
+			this.firstListTarget 	= firstListTarget;
+			this.secListTarget 		= secListTarget;
+			this.thirdListTarget 	= thirdListTarget;
+
+			this.conversationTarget = conversationTarget;
 		}
 		
 		public int ID
@@ -57,6 +69,12 @@ public class Conversations : MonoBehaviour {
 			}
 		}
 
+		public int ConversationTarget
+		{
+			get{
+				return conversationTarget;
+			}
+		}
 		public int FirstInfluence
 		{
 			
@@ -80,27 +98,27 @@ public class Conversations : MonoBehaviour {
 			}
 		}
 
-		public int FirstInfluenceTarget
+		public int FirstListTarget
 		{
 
 			get{
-				return firstInfluenceTarget;
+				return firstListTarget;
 			}
 		}
 		
-		public int SecInfluenceTarget
+		public int SecListTarget
 		{
 			
 			get{
-				return secInfluenceTarget;
+				return secListTarget;
 			}
 		}
 
-		public int ThirdInfluenceTarget
+		public int ThirdListTarget
 		{
 			
 			get{
-				return thirdInfluenceTarget;
+				return thirdListTarget;
 			}
 		}
 
