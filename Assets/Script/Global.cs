@@ -9,4 +9,6 @@ public static class Global{
 	public static int HAR;
 
 	public static string Emotion;
+
+	public static bool inventoryOn;
 }

@@ -5,12 +5,7 @@ using System.Collections.Generic;
 public class Inventory : MonoBehaviour {
 //	private AllItems itemComponent;
 /*
-	private float SwPos = Screen.height / 10;
-	private float ShPos = Screen.width / 10;
-	private float radius;
 
-
-	private Rect invertoryRect 			= new Rect(0,0,Screen.width,Screen.height);
 	private Rect invertoryRectWindow 	= new Rect(0,0,Screen.width,Screen.height);
 	private Rect equipmentRect 			= new Rect(0,0,Screen.width,Screen.height);
 	private Rect equipmentRectWindow 	= new Rect(0,0,Screen.width,Screen.height);
@@ -108,5 +103,21 @@ public class Inventory : MonoBehaviour {
 		GUILayout.EndArea();
 
 	}*/
+	private float radius;
+	public Texture2D background;
+	private bool inventoryWindowShow = false;
+	
+	
+	private Rect fullScreen 			= new Rect(0,0,Screen.width,Screen.height);
+	void Update(){
+		if(Global.inventoryOn){
+			fullScreen = GUI.Window(0,fullScreen,InventoryFunc,"", GUIStyle.none);
+		}
+
+	}
+
+	void InventoryFunc(int id){
+		GUI.skin.label.fontSize = 20;
+	}
 	
 }

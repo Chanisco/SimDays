@@ -6,15 +6,15 @@ using System;
 public class Conversations : MonoBehaviour {
 	
 	static public List <ConvContent> Conversation = new List <ConvContent>{
-		new ConvContent(0,"???", "HA, Now i got you!",				"Happy", 	"Jump", 	false),
-		new ConvContent(1,"???", "Thinking you could outrun me!?",	"Happy", 		"" , 	false),
-		new ConvContent(2,"???", "Not today!",						"Happy", 		"" , 	true),
-		new ConvContent(3,"???", "Thought you could get away?",		"Happy", 		"" , 	true),
-		new ConvContent(4,"???", "Can't believe you went without me","Happy", 		"" , 	false),
-		new ConvContent(5,"???", "Is something wrong?",				"Questioned", 	"" , 	true),
-		new ConvContent(6,"???", "Well fuck...",					"Shocked", 		"" , 	true),
-		new ConvContent(7,"???", "",								"Shocked", 		"" , 	true),
-		new ConvContent(8,"???", "",								"Shocked", 		"" , 	true),
+		new ConvContent(0,"???", "HA, Now i got you!",					"Happy", 	"Jump", 	false),
+		new ConvContent(1,"???", "Thinking you could outrun me!?",		"Happy", 		"" , 	false),
+		new ConvContent(2,"???", "Not today!",							"Happy", 		"" , 	true),
+		new ConvContent(3,"???", "Thought you could get away?",			"Happy", 		"" , 	true),
+		new ConvContent(4,"???", "Can't believe you went without me",	"Happy", 		"" , 	false),
+		new ConvContent(5,"???", "Is something wrong?",					"Questioned", 	"" , 	true),
+		new ConvContent(6,"???", "Well fuck...",						"Shocked", 		"" , 	true),
+		new ConvContent(7,"???", "",									"Shocked", 		"" , 	true),
+		new ConvContent(8,"???", "",									"Shocked", 		"" , 	true),
 
 	};
 
@@ -32,6 +32,9 @@ public class Conversations : MonoBehaviour {
 		new ConvInfluence(0,0,0,0, 0,0,0, 0),
 		new ConvInfluence(1,0,0,0, 0,0,0, 0),
 		new ConvInfluence(2,1,2,0, 3,4,6, 1),
+		new ConvInfluence(3,0,1,0, 0,0,0, 0),
+		new ConvInfluence(4,0,0,0, 0,0,0, 0),
+		new ConvInfluence(5,1,1,0, 0,0,0, 0),
 	};
 
 	public class ConvInfluence{
@@ -47,7 +50,7 @@ public class Conversations : MonoBehaviour {
 
 		private int conversationTarget;
 
-		public ConvInfluence(int iD,int firstInfluence,int secInfluence, int thirdInfluence , int firstInfluenceTarget , int secInfluenceTarget ,int thirdInfluenceTarget, int conversationTarget){
+		public ConvInfluence(int iD,int firstInfluence,int secInfluence, int thirdInfluence , int firstListTarget , int secListTarget ,int thirdListTarget, int conversationTarget){
 			this.iD = iD;
 			this.firstInfluence = firstInfluence;
 			this.secInfluence 	= secInfluence;

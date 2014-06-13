@@ -65,13 +65,14 @@ public class GuiSocial : MonoBehaviour {
 
 			int CharacterTarget = Conversations.Influence[ConvNumber].ConversationTarget;
 
+			Debug.Log(firstListTarget);
 			if(Input.GetKey("z")){
 				ConvNumber = firstListTarget;
 				Resume = false;
 				str = "";
-				ConversationWatch();
 				CharacterInvolvement.Characters[CharacterTarget].Happy += firstInflu;
 				ReactionRequest = false;
+				ConversationWatch();
 				
 			}
 			if(Input.GetKey("x")){
