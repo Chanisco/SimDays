@@ -11,4 +11,6 @@ public static class Global{
 	public static string Emotion;
 
 	public static bool inventoryOn;
+
+	public static int transport = 11;
 }
