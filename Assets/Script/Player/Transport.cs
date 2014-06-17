@@ -10,7 +10,7 @@ public class Transport : MonoBehaviour {
 		int transport = Global.transport;
 		speed = VehilceCheck(transport);
 
-		if(transport > 10 && transport <= 20 ){
+		if(Global.driving){
 			if(Input.GetKey(KeyCode.A)){
 				transform.Rotate(new Vector3(0,5,0));
 
@@ -25,7 +25,7 @@ public class Transport : MonoBehaviour {
 			}
 		}
 
-		if(transport >= 0 && transport <= 10){
+		if(!Global.driving){
 			if(Input.GetKey(KeyCode.A)){
 				transform.eulerAngles = new Vector3(0,270,0);
 				transform.Translate(new Vector3(0,0,speed));

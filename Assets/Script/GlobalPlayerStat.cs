@@ -12,5 +12,6 @@ public static class Global{
 
 	public static bool inventoryOn;
 
+	public static bool driving = true;
 	public static int transport = 11;
 }

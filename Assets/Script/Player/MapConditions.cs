@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Collision : MonoBehaviour {
+public class MapConditions : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -10,6 +10,8 @@ public class Collision : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if(!Global.driving){
+
+		}
 	}
 }
