@@ -12,11 +12,11 @@ public class Transport : MonoBehaviour {
 
 		if(Global.driving){
 			if(Input.GetKey(KeyCode.A)){
-				transform.Rotate(new Vector3(0,5,0));
+				transform.Rotate(new Vector3(0,-5,0));
 
 			}
 			if(Input.GetKey(KeyCode.D)){
-				transform.Rotate(new Vector3(0,-5,0));
+				transform.Rotate(new Vector3(0,5,0));
 
 			}
 
