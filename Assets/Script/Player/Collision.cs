@@ -2,15 +2,15 @@
 using System.Collections;
 
 public class Collision : MonoBehaviour {
-	public int transport;
+	//public int transport;
 
 	void Start(){
-		transport = Global.transport;
+		//transport = Global.transport;
 	}
 
 	void OnCollisionEnter(){
-		if(transport > 10 && transport < 20){
+		//if(transport > 10 && transport < 20){
 //			Global.
-		}
+		//}
 	}
 }
