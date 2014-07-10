@@ -10,7 +10,7 @@ public class MapConditions : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(!Global.driving){
+		if(!GlobalPlayerStat.driving){
 
 		}
 	}

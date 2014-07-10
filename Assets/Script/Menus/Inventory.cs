@@ -105,12 +105,12 @@ public class Inventory : MonoBehaviour {
 	}*/
 	private float radius;
 	public Texture2D background;
-	private bool inventoryWindowShow = false;
+	//private bool inventoryWindowShow = false;
 	
 	
 	private Rect fullScreen 			= new Rect(0,0,Screen.width,Screen.height);
 	void Update(){
-		if(Global.inventoryOn){
+		if(GlobalPlayerStat.inventoryOn){
 			fullScreen = GUI.Window(0,fullScreen,InventoryFunc,"", GUIStyle.none);
 		}
 

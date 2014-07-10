@@ -8,12 +8,12 @@ public class Transport : MonoBehaviour {
 
 
 	void Update () {
-		int transport = Global.transportSpeed;
-		int walk = Global.walkSpeed;
+		int transport = GlobalPlayerStat.transportSpeed;
+		int walk = GlobalPlayerStat.walkSpeed;
 		vehilceSpeed = VehilceCheck(transport);
 		walkSpeed = VehilceCheck(walk);
 
-		if(Global.driving){
+		if(GlobalPlayerStat.driving){
 			if(Input.GetKey(KeyCode.A)){
 				transform.Rotate(new Vector3(0,-5,0));
 
@@ -28,7 +28,7 @@ public class Transport : MonoBehaviour {
 			}
 		}
 
-		if(!Global.driving){
+		if(!GlobalPlayerStat.driving){
 			if(Input.GetKey(KeyCode.A)){
 				transform.eulerAngles = new Vector3(0,270,0);
 				transform.Translate(new Vector3(0,0,vehilceSpeed));
@@ -57,7 +57,7 @@ public class Transport : MonoBehaviour {
 			Number = Number - 10;
 			Number = Number / 10;
 		}else if (Number < 10){
-			Number = Number / 50;
+			Number = Number / 10;
 		}
 		return Number;
 	}

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public static class Global{
+public static class GlobalPlayerStat{
 
 	public static int STR;
 	public static int DEX;
@@ -13,6 +13,6 @@ public static class Global{
 	public static bool inventoryOn;
 
 	public static bool driving = true;
-	public static int transportSpeed = 11;
+	public static int transportSpeed = 19;
 	public static int walkSpeed = 1;
 }

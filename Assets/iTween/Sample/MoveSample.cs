@@ -4,20 +4,20 @@ using System.Collections;
 public class MoveSample : MonoBehaviour
 {	
 	void Update(){
-		if(Global.Emotion == "Jump"){
+		if(GlobalPlayerStat.Emotion == "Jump"){
 			JumpIn();
-		}if(Global.Emotion == "Chase"){
+		}if(GlobalPlayerStat.Emotion == "Chase"){
 			Chase ();
 		}
 	}
 	void JumpIn(){
 		iTween.MoveBy(gameObject, iTween.Hash("x", 5, "easeType", "easeInOutExpo", "loopType","none", "delay", .1));
-		Global.Emotion = "";
+		GlobalPlayerStat.Emotion = "";
 	}
 
 	void Chase(){
 		iTween.MoveBy(gameObject, iTween.Hash("x", 16, "easeType", "easeInOutExpo", "loopType","none", "delay", .1));
-		Global.Emotion = "";
+		GlobalPlayerStat.Emotion = "";
 	}
 
 

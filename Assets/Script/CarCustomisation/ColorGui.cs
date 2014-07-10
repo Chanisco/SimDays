@@ -37,7 +37,7 @@ public class ColorGui : MonoBehaviour {
 				GUI.Label(secondBackgroundRect,"Are you sure you're Done?");
 			}
 			if(GUI.Button(new Rect(500,100,100, 100),yesButton,GUIStyle.none)){
-				Application.LoadLevel("Walk");
+				Application.LoadLevel("World");
 			}
 			if(GUI.Button(new Rect(650,100,100, 100),noButton,GUIStyle.none)){
 				CarCostumisation.Finish = false;

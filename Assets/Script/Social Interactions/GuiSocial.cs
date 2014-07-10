@@ -97,7 +97,7 @@ public class GuiSocial : MonoBehaviour {
 	}
 
 	void ConversationWatch(){
-		Global.Emotion = Conversations.Conversation[ConvNumber].Action;
+		GlobalPlayerStat.Emotion = Conversations.Conversation[ConvNumber].Action;
 		StartCoroutine( AnimateText(Conversations.Conversation[ConvNumber].Speech) );
 	}
 
