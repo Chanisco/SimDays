@@ -4,7 +4,7 @@ using System.Collections;
 public class Transport : MonoBehaviour {
 	public float vehilceSpeed;
 	public float walkSpeed;
-	private bool vehilceBool = true;
+	public bool vehilceBool = true;
 
 
 	void Update () {

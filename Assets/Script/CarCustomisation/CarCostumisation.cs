@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class CarCostumisation : MonoBehaviour {
-	public float halfScreen = Screen.width / 2;
+	private float halfScreen = Screen.width / 2;
 	public static bool Finish = false;
 	public float yielder = 2;
 	void Update(){
@@ -56,11 +56,8 @@ public class CarCostumisation : MonoBehaviour {
 			CarInfo.SpecialRightClr = GameObject.Find ("SpecialRight").renderer.material.color;
 			GlobalSaveScreen.SaveBar += 1;
 
-			yielder -= Time.deltaTime;
-			if(yielder < 0){
-				Application.LoadLevel("World");
-				GlobalSaveScreen.Save = false;
-			}
+			Application.LoadLevel("World1");
+			GlobalSaveScreen.Save = false;
 		}
 	}
 
