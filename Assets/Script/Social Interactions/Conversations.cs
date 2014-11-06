@@ -6,15 +6,15 @@ using System;
 public class Conversations : MonoBehaviour {
 	
 	static public List <ConvContent> Conversation = new List <ConvContent>{
-		new ConvContent(0,"???", "HA, Now i got you!",					"Happy", 	"Jump", 	false),
+		new ConvContent(0,"???", "HA, Now i got you!",				"Happy", 		"Jump", 	false),
 		new ConvContent(1,"???", "Thinking you could outrun me!?",		"Happy", 		"" , 	false),
-		new ConvContent(2,"???", "Not today!",							"Happy", 		"" , 	true),
+		new ConvContent(2,"???", "Not today!",					"Happy", 		"" , 	true),
 		new ConvContent(3,"???", "Thought you could get away?",			"Happy", 		"" , 	true),
-		new ConvContent(4,"???", "Can't believe you went without me",	"Happy", 		"" , 	false),
-		new ConvContent(5,"???", "Is something wrong?",					"Questioned", 	"" , 	true),
-		new ConvContent(6,"???", "Well fuck...",						"Shocked", 		"" , 	true),
-		new ConvContent(7,"???", "",									"Shocked", 		"" , 	true),
-		new ConvContent(8,"???", "",									"Shocked", 		"" , 	true),
+		new ConvContent(4,"???", "Can't believe you went without me",		"Happy", 		"" , 	false),
+		new ConvContent(5,"???", "Is something wrong?",				"Questioned", 		"" , 	true),
+		new ConvContent(6,"???", "Well fuck...",				"Shocked", 		"" , 	true),
+		new ConvContent(7,"???", "",						"Shocked", 		"" , 	true),
+		new ConvContent(8,"???", "",						"Shocked", 		"" , 	true),
 
 	};
 
